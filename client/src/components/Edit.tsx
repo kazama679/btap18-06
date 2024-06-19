@@ -33,7 +33,7 @@ const Edit: React.FC<EditProps> = ({ id, onSaveSuccess }) => {
     }
     
     axios.put(`http://localhost:8080/list-post/${id}`, { title, image, content })
-      .then(response => {
+      .then(() => {
         onSaveSuccess();
       })
       .catch(err => {
